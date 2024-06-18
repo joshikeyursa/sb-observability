@@ -3,4 +3,4 @@ spring:
     name: sb-observability
 
 server:
-  port: 8080
+  port: 8090
