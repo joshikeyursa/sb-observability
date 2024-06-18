@@ -26,6 +26,6 @@ public class GenericController {
     @GetMapping("/fetchUser")
     public ResponseEntity<String> fetchUser(){
         logger.info("Returning Spiderman!");
-        return ResponseEntity.ok("Spiderman");
+        return ResponseEntity.ok("Spiderman!");
     }
 }
