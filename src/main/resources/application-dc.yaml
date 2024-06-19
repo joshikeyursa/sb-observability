@@ -4,3 +4,6 @@ spring:
 superhero: Superman
 server:
   port: 8096
+
+downstream:
+  basepath: http://localhost:8095

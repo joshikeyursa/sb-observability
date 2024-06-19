@@ -4,3 +4,6 @@ spring:
 superhero: Thor
 server:
   port: 8095
+
+downstream:
+  basepath: http://localhost:8096
