@@ -34,4 +34,20 @@ public class AsyncGenericService {
                         return Mono.just(res+" it's been "+response+" days we met!");
                     }));
     }
+
+    public Mono<String> sayComplexHelloWithDays(){
+        logger.info("Saying Complex Hello");
+        return webClient.get()
+                .uri(AppConstants.SAY_HELLO_PATH)
+                .retrieve()
+                .bodyToMono(String.class)
+                .flatMap(res->
+                        webClient.get()
+                                .uri(AppConstants.FETCH_NUMBERS_PATH)
+                                .retrieve()
+                                .bodyToMono(Integer.class)
+                                .flatMap(response->{
+                                    return Mono.just(res+" it's been "+response+" days we met!");
+                                }));
+    }
 }

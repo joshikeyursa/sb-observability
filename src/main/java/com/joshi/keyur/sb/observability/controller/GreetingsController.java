@@ -33,4 +33,9 @@ public class GreetingsController {
         logger.info("Will Say Hello with days");
         return asyncGenericService.sayHelloWithDays();
     }
+    @GetMapping("/sayComplexHello")
+    public Mono<String> sayComplexHelloWithDays(){
+        logger.info("Will Say Hello with days");
+        return asyncGenericService.sayComplexHelloWithDays();
+    }
 }
